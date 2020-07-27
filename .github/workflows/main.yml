@@ -3,9 +3,9 @@ on: push
 jobs:
   build:
     name: Hello world action
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - uses: dawidh15/hello-github-actions/action-a/action
+      - uses: ./action-a
         with:
           MY_NAME: "Mona"
