@@ -3,9 +3,17 @@ on: push
 jobs:
   build:
     name: Hello world action
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
+    defaults:
+      run:
+        shell: powershell
+        working-directory: action-a
     steps:
+      - name: Checkout
       - uses: actions/checkout@v1
-      - uses: ./action-a
+
+      - name: Run ps1
         with:
           MY_NAME: "Mona"
+        run: |
+          .\entrypoint.ps1
