@@ -6,6 +6,6 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v1
-      - uses: \action-a\action
+      - uses: dawidh15/hello-github-actions/action-a/action
         with:
           MY_NAME: "Mona"
