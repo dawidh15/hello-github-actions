@@ -1,5 +1,5 @@
-FROM debian:9.5-slim
+FROM microsoft/windowsservercore
 
-ADD entrypoint.sh /entrypoint.sh
-RUN chmod +x /entrypoint.sh
-ENTRYPOINT ["/entrypoint.sh"]
+ADD entrypoint.ps1 .\entrypoint.ps1
+RUN .\entrypoint.ps1
+ENTRYPOINT [".\entrypoint.ps1"]
