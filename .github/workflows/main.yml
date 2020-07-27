@@ -10,5 +10,5 @@ jobs:
       - name: Powershell
         run: .\action-a\entrypoint.ps1
         shell: powershell
-        with:
-          MY_NAME: "Mona"
+        env:
+          INPUT_MY_NAME: Mona
