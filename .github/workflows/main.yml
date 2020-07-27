@@ -6,7 +6,9 @@ jobs:
     runs-on: windows-2019
 
     steps:
+      - name: checkout
       - uses: actions/checkout@v1
+
       - name: Powershell
         run: .\action-a\entrypoint.ps1
         shell: powershell
