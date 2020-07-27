@@ -11,8 +11,6 @@ jobs:
     steps:
       - name: Checkout
       - uses: actions/checkout@v1
-
-      - name: Run ps1
         with:
           MY_NAME: "Mona"
         run: |
